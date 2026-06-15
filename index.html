@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CareMate AI</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<header>
+    <h1>🩺 CareMate AI</h1>
+    <p id="subtitle">Smart Elderly Health Companion</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+    <button onclick="showSection('dashboard')">🏠</button>
+    <button onclick="showSection('health')">❤️</button>
+    <button onclick="showSection('yoga')">🧘</button>
+    <button onclick="showSection('appointments')">🩺</button>
+    <button onclick="showSection('chat')">🤖</button>
+</nav>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="page">
+
+    <h2>Dashboard</h2>
+
+    <div class="card">
+        <h3>Health Score</h3>
+        <div id="healthScore">0</div>
+    </div>
+
+    <div class="card">
+        <h3>Quick Stats</h3>
+        <p id="stats"></p>
+    </div>
+
+</section>
+
+<!-- HEALTH -->
+<section id="health" class="page">
+    <h2>Health Tracker</h2>
+
+    <div class="card">
+        <button onclick="addWater(250)">💧 +250ml</button>
+        <button onclick="addWater(500)">💧 +500ml</button>
+        <p id="waterDisplay"></p>
+    </div>
+
+</section>
+
+<!-- YOGA -->
+<section id="yoga" class="page">
+    <h2>🧘 Senior Yoga</h2>
+
+    <div id="yogaList"></div>
+</section>
+
+<!-- APPOINTMENTS -->
+<section id="appointments" class="page">
+
+    <h2>🩺 Appointments</h2>
+
+    <div class="card">
+
+        <input id="docName" placeholder="Doctor Name">
+        <input id="hospital" placeholder="Hospital">
+        <input id="date" type="date">
+        <input id="time" type="time">
+
+        <button onclick="saveAppointment()">Save</button>
+
+    </div>
+
+    <div id="appointmentList"></div>
+
+</section>
+
+<!-- CHAT -->
+<section id="chat" class="page">
+
+    <h2>🤖 CareMate AI</h2>
+
+    <div id="chatBox"></div>
+
+    <input id="msg" placeholder="Ask something...">
+    <button onclick="askAI()">Send</button>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
